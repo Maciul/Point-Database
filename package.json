@@ -1,0 +1,15 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "Database for Point380",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pawel Maciulewski",
+  "license": "MIT",
+  "dependencies": {
+    "csv": "^1.1.0",
+    "mongodb": "^2.2.9"
+  }
+}
