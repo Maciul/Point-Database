@@ -43,6 +43,7 @@ jspm_packages
 #Company Data
 data
 seeds
+dataJSON
 
 DATABASE
 .env
