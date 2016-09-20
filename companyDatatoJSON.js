@@ -24,15 +24,15 @@ fs.readFile('./data/CompanyData.csv', (error, data) => {
         target: [],
         emissions: [],
         emissionsgdp: []
-      }
+      };
 // Company Targets for CO2 emissions
       general.target.push({
-        reduction: row[10],
-        base: row[11],
-        target: row[12],
-        delta: row[13],
-        gap2EIA: row[14]
-      })
+        reduction: parseFloat(row[10]),
+        base: parseFloat(row[11]),
+        target: parseFloat(row[12]),
+        delta: parseFloat(row[13]),
+        gap2EIA: parseFloat(row[14])
+      });
 // CO2 EMISSIONS
       general.emissions.push({
         2007: parseFloat(row[15]),
@@ -46,7 +46,7 @@ fs.readFile('./data/CompanyData.csv', (error, data) => {
         2015: parseFloat(row[23]),
         2016: parseFloat(row[24]),
         2017: parseFloat(row[25]),
-      })
+      });
 // CO2 Emissions / GDP
       general.emissionsgdp.push({
         2007: parseFloat(row[26]),
@@ -60,11 +60,11 @@ fs.readFile('./data/CompanyData.csv', (error, data) => {
         2015: parseFloat(row[34]),
         2016: parseFloat(row[35]),
         2017: parseFloat(row[36])
-      })
+      });
 
       companies.push(general);
     }
-    fs.writeFile('./seed/companies.json', JSON.stringify(companies, null, 2),(error) => {
+    fs.writeFile('./seeds/companies.json', JSON.stringify(companies, null, 2),(error) => {
       console.log('companies.json created');
     });
   });
