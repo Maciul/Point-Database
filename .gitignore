@@ -47,3 +47,5 @@ dataJSON
 
 DATABASE
 .env
+excelTemplate
+MongoDB_Export
